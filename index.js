@@ -44,3 +44,12 @@ const add = (num, num2) => {
 }
 
 //console.log(add(5,5));
+// true if num is negative 
+const isNegative = num => {
+    if (num < 0) {
+        return true;
+    } else if (num > 0) {
+        return false;
+    }
+}
+//console.log(isNegative(Math.PI));
