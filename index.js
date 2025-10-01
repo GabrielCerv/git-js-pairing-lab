@@ -35,3 +35,12 @@ const untilNum = num => {
 const multiply = (num, num2) => num * num2;
 
 //console.log(multiply(3, 7.5))
+
+const add = (num, num2) => {
+    if (num === num2) {
+        return (num + num2) * 3;
+    }
+    return num + num2;
+}
+
+//console.log(add(5,5));
