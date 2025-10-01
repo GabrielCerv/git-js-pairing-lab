@@ -32,3 +32,6 @@ const untilNum = num => {
 }
 
 //untilNum(42);
+const multiply = (num, num2) => num * num2;
+
+//console.log(multiply(3, 7.5))
