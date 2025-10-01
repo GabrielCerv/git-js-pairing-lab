@@ -53,3 +53,7 @@ const isNegative = num => {
     }
 }
 //console.log(isNegative(Math.PI));
+
+const triangleArea = (base, height) => (base * height) / 2;
+
+//console.log(triangleArea(6, 8));
