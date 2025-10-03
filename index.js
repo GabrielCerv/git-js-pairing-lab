@@ -68,9 +68,50 @@ const betweenTwentyAndForty = num => {
 const largest = (num1, num2, num3) => {
     if (num1 >= num2 && num1 >= num3) {
         return num1;
-    } else if( num2 >= num1 && num2 >= num3) {
+    } else if (num2 >= num1 && num2 >= num3) {
         return num2;
     } return num3;
 }
-
 //console.log(largest(30,30,1));
+
+//Write a function printTime that prints out the current time in the format HH:MM:ss. Do not hard code the hour, minute, or seconds values.
+//getHours()
+// getMinutes()
+// getSeconds()
+const printTime = () => {
+    const time = new Date();
+    let hours = time.getHours()
+    let minutes = time.getMinutes()
+    let seconds = time.getSeconds()
+    console.log(hours)
+    console.log(minutes)
+    console.log(seconds)
+    console.log(`${hours - 12} : ${minutes} : ${seconds}`)
+}
+//console.log(new Date());
+//printTime();
+
+
+const isLeapYear = (year) => {
+    if (year % 400 === 0) {
+        return true
+    } else if (year % 100 === 0) {
+        return false
+    } else if (year % 4 === 0) {
+        return true
+    } else {
+        return false
+    }
+}
+//console.log(isLeapYear(1999));
+
+const getExtention = (fileName) => {
+    let len = fileName.length
+    for (let i = 0; i <= len - 1; i++) {
+        if (fileName[i] === '.') {
+            console.log(fileName.slice(i))
+        }
+    }
+}
+//getExtention("hello.txt");
+
