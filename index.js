@@ -74,3 +74,51 @@ const largest = (num1, num2, num3) => {
 }
 
 //console.log(largest(30,30,1));
+
+const absoluteNineteen = num => {
+    // If the number is less than nineteen return the difference
+    if (num <= 19) {
+        return 19 - num;
+    }
+    //If not, return the difference times 3
+    return (num - 19) * 3;
+}
+
+//console.log(absoluteNineteen(10));
+
+const switchLetters = str => {
+    // If the string has less than two characters, return the same string
+    if (str.length < 2) {
+        return str;
+    }
+    // Split the string into an array and store it into a new variable
+    let newString = str.split('');
+    // Switch the value of the first element of the array, to the value of the last element of the string
+    newString[0] = str[str.length - 1];
+    // Switch the value of the last element of the array, to the value of the first element of the string
+    newString[str.length - 1] = str[0];
+    // Join the array back up to a string and return it
+    newString = newString.join('');
+    return newString;
+}
+
+//console.log(switchLetters('hello world'));
+
+const changeString = str => {
+    let newString = '';
+    let currentChar = '';
+    for (let i = 0; i < str.length; i++) {
+        // Get the ASCII number of the current character
+        currentChar = str.charCodeAt(i);
+        // If the character is 'z' add an 'a' to the string instead of using the next ASCII character
+        if ( currentChar === 122) {
+            newString += 'a'
+        } // Add 1 to the current character, turning it into the following letter of the alphabet
+        else {
+            newString += String.fromCharCode(currentChar + 1);
+        }
+    } 
+    return newString;
+}
+
+//console.log(changeString('helloworld'));
